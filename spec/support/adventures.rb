@@ -16,6 +16,7 @@ module Adventures
   end
 
   def self.continue
+    return level_2 if class_exists?('SecretKey')
     level_1
   end
 
@@ -25,6 +26,15 @@ module Adventures
     puts
     puts " To continue, 'git merge warlord_dave'"
   end
+
+  def self.level_2
+    puts
+    puts " Nooooooo! You have defeated the Evil Warlord Dave, who has now crawled back to the pub."
+    puts " I hope you're ready to challenge Dr. John Fizz-Buzz!"
+    puts
+    puts " To continue, 'git merge dr_john_fizz_buzz'"
+  end
+
 
   def self.header
     puts
@@ -40,5 +50,12 @@ module Adventures
     puts '          /_/  |_\__,_/ |___/\___/_/ /_/\__/\__,_/_/   \___/____/ '
     puts
     puts ' ---------------------------------------------------------------------'
+  end
+
+  def self.class_exists?(class_name)
+    klass = Module.const_get(class_name)
+    return klass.is_a?(Class)
+  rescue NameError
+    return false
   end
 end
