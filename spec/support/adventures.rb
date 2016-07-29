@@ -16,8 +16,14 @@ module Adventures
   end
 
   def self.continue
+    level_1
+  end
+
+  def self.level_1
     puts
-    puts " Think your clever?"
+    puts " Muahahhahahah. You think you're smart?! Wait until you meet the Evil Warlord... Dave!"
+    puts
+    puts " To continue, 'git merge warlord_dave'"
   end
 
   def self.header
