@@ -100,4 +100,18 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  config.before(:suite) do
+    Adventures.header
+    Adventures.intro
+  end
+
+  config.after(:suite) do
+    examples = RSpec.world.filtered_examples.values.flatten
+    if examples.none?(&:exception)
+      Adventures.continue
+    end
+  end
 end
+
+Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each {|file| require file }
+
