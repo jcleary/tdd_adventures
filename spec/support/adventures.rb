@@ -22,14 +22,14 @@ module Adventures
 
   def self.level_1
     puts
-    puts " Muahahhahahah. You think you're smart?! Wait until you meet the Evil Warlord... Dave!"
+    puts " Muahahhahahah. You think you're smart?! Wait until you meet the Evil Warlord... Hans!"
     puts
     puts " To continue, 'git merge warlord_dave'"
   end
 
   def self.level_2
     puts
-    puts " Nooooooo! You have defeated the Evil Warlord Dave, who has now crawled back to the pub."
+    puts " Nooooooo! You have defeated the Evil Warlord Hans, who has now crawled back to his cave."
     puts " I hope you're ready to challenge Dr. John Fizz-Buzz!"
     puts
     puts " To continue, 'git merge dr_john_fizz_buzz'"
