@@ -16,6 +16,7 @@ module Adventures
   end
 
   def self.continue
+    return level_4 if class_exists?('Anagram')
     return level_3 if class_exists?('FizzBuzzer')
     return level_2 if class_exists?('SecretKey')
     level_1
@@ -42,6 +43,13 @@ module Adventures
     puts " you through your paces with the Reiss Piece Monster!"
     puts
     puts " To continue, 'git merge reiss_piece_monster'"
+  end
+
+  def self.level_4
+    puts
+    puts " Not so eash, huh? Are you ready to meet the next beast? Its Hassan The Heinous "
+    puts
+    puts " To continue, 'git merge hassan_the_heinous'"
   end
 
 
